@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Submit an inquiry to learn more about one of our listed vehicles.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home: Mr. T Vehicles </title>
+    <title>Frequently Asked Questions and inquiry | Mr. T Vehicles </title>
     <!-- This is the title of the webpage -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -11,11 +12,11 @@
 <body style="background-color:lightblue">
     <!-- This is the navigation bar -->
     <nav class="nav-bar">
-        <a href="Index.html"> Home </a>
-        <a href="about.html"> About </a>
-        <a href="Vehicles.html"> Vehicles </a>
-        <a href="#"> Frequently Asked Questions </a>
-        <a href="contact.html"> Contact </a>
+        <a href="Index.html"> Home. </a>
+        <a href="about.html"> About. </a>
+        <a href="Vehicles.html"> Vehicles. </a>
+        <a href="#"> Frequently Asked Questions and Vehicle Inquiries. </a>
+        <a href="contact.html"> Contact. </a>
         </nav>
 <hr>
 
@@ -46,11 +47,50 @@
     </p>
 
 <hr>
+
+ <center><b> <font size="12"> Vehicle Inquiry and Form. </font> </b></center>
+    <center><p><b>If a customer wants to test drive a car or inquire about any vehicle, please fill in the following form with your name and surname, email address and contact details and state which vehicles you may be interested in, then we will make sure to get back to you as soon as possible.</b>.</b></p><br></center>
+<center>
+    <form action="/submit-inquiry" method="POST">
+  <h2>Vehicle Inquiry</h2>
+
+  <label for="name">Full Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <form id="phoneForm" onsubmit="return validatePhoneForm()">
+  <label for="phone">Phone Number:</label><br>
+  <input type="text" id="phone" name="phone" required><br><br>
+
+  <label for="vehicle">Interested Vehicle:</label><br>
+  <select id="vehicle" name="vehicle">
+    <option value="Volkswagen Golf 7.5 GTR">Volkswagen Golf 7.5 GTR</option>
+    <option value="Audi A5 2-door">Audi A5 2-door</option>
+    <option value="Audi A5 4-door">Audi A5 4-door</option>
+    <option value="Mercedes G-Class Brabus">Mercedes G-Class Brabus</option>
+    <option value="Mercedes Convertable">Mercedes Convertable</option>
+    <option value="RAM Truck Double Cab">RAM Truck Double Cab</option>
+    <option value="FORD Ranger Double Cab">FORD Ranger Double Cab</option>
+  </select><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+
+  <button type="Send Inquiry" onclick="SendInquiry()">Send Inquiry</button>
+</form>
+
+</center>
+ <hr>
  <!-- This is the footer -->
 <footer>
     &copy; 2025 Mr.T Vehicle Sales and Repairs. All rights reserved.
 </footer>
 
+ <!-- Link to JavaScript file -->
+  <script src="validation.js"></script>
         </body>
 
 
